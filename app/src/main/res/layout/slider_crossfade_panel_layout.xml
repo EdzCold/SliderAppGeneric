@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.edrag.slidingpanelfirebase.SliderPanel.CrossFadeSlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sliding_pane_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="430dp"
+            android:layout_height="match_parent"
+            android:background="@color/fullpanel_color">
+
+            <FrameLayout
+                android:id="@+id/frame_icons_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+            <!--            <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/partialpanel_color"
+                            android:text="@string/partial_pane_string" />-->
+
+            <FrameLayout
+                android:id="@+id/frame_icons"
+                android:layout_width="70dp"
+                android:background="@color/partialpanel_color"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+        </FrameLayout>
+<!--
+        <TextView
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="64dp"
+            android:layout_weight="1"
+            android:background="@color/windows_panel_color"
+            android:text="@string/windows_pane__string" />
+        -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="70dp"
+            android:id="@+id/frame_firebase_analytics"
+            android:layout_height="match_parent"
+            android:background="@color/windows_panel_color">
+        </FrameLayout>
+
+
+    </com.example.edrag.slidingpanelfirebase.SliderPanel.CrossFadeSlidingPaneLayout>
+
+</LinearLayout>

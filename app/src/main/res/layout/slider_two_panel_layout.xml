@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SlidingPaneLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sliding_pane_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="430dp"
+        android:layout_height="match_parent"
+        android:background="@color/partialpanel_color"
+        android:text="@string/pane_1_string"/>
+    <TextView
+        android:layout_width="1000dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="64dp"
+        android:background="@color/fullpanel_color"
+        android:text="@string/pane_2_string"/>
+
+</android.support.v4.widget.SlidingPaneLayout>

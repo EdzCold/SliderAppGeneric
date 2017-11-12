@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SlidingPanelFirebase</string>
+
+    <string name="pane_1_string">Panel 11</string>
+    <string name="pane_2_string">Panel 22</string>
+
+    <string name="full_pane_string">Full Panel</string>
+    <string name="partial_pane_string">Partial Panel</string>
+    <string name="windows_pane__string">Panel 22</string>
+    <string name="title_activity_icon_panel">IconPanelActivity</string>
+
+    <string name="information_string">Information</string>
+    <string name="activity_string">Activity</string>
+    <string name="preferences_string">Preferences</string>
+    <string name="event_string">Event</string>
+    <string name="crash_report_string">Crash Report</string>
+
+</resources>
