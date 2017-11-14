@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.edrag.slidingpanelfirebase.R;
 import com.example.edrag.slidingpanelfirebase.adapter.AdapterIconsImage;
@@ -27,6 +28,7 @@ public class SliderPartialListIconsFragment extends Fragment {
 
     private RecyclerView iconsRecycler;
     private AdapterIconsImage adapterIcon;
+    private ArrayList<IconsListImage> elementIcons;
 
     public SliderPartialListIconsFragment() {
     }
@@ -65,7 +67,8 @@ public class SliderPartialListIconsFragment extends Fragment {
         iconsRecycler.setLayoutManager(linearLayoutManager);
 
         //Inizialiced icons adapter    //////////////////////////////////////////////////
-        ArrayList<IconsListImage> elementIcons = new ArrayList<>();
+        elementIcons = new ArrayList<>();
+
         elementIcons.add(new IconsListImage("Ed_1"));
         elementIcons.add(new IconsListImage("Ed_2"));
         elementIcons.add(new IconsListImage("Ed_3"));

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SlidingPanelFirebase.iml" filepath="$PROJECT_DIR$/SlidingPanelFirebase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SliderAppGeneric.iml" filepath="$PROJECT_DIR$/SliderAppGeneric.iml" />
+      <module fileurl="file://C:\Users\EN501863\Desktop\Repositorio\Offline\SliderAppGeneric\SlidingPanelFirebase.iml" filepath="C:\Users\EN501863\Desktop\Repositorio\Offline\SliderAppGeneric\SlidingPanelFirebase.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

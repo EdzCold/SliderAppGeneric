@@ -10,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SlidingPaneLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.example.edrag.slidingpanelfirebase.fragment.FireBaseAnalyticsFragment;
 import com.example.edrag.slidingpanelfirebase.fragment.SliderFullListFragment;
