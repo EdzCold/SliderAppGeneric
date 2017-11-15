@@ -63,7 +63,6 @@ public class CrossFadeSlidingPaneLayout extends SlidingPaneLayout {
         super.setPanelSlideListener(crossFadeListener);
     }
 
-
     private SimplePanelSlideListener crossFadeListener
             = new SimplePanelSlideListener() {
         @Override
@@ -72,9 +71,9 @@ public class CrossFadeSlidingPaneLayout extends SlidingPaneLayout {
             if (partialView == null || fullView == null) {
                 return;
             }
-
-            partialView.setVisibility(isOpen() ? View.GONE : VISIBLE);
-            partialView.setAlpha(1 - slideOffset);
+//            partialView.setVisibility(isOpen() ? View.GONE : VISIBLE);
+            partialView.setVisibility(VISIBLE);
+//            partialView.setAlpha(1 - slideOffset);
             fullView.setAlpha(slideOffset);
         }
     };
@@ -85,7 +84,9 @@ public class CrossFadeSlidingPaneLayout extends SlidingPaneLayout {
         super.onLayout(changed, l, t, r, b);
 
         if (partialView != null) {
-            partialView.setVisibility(isOpen() ? View.GONE : VISIBLE);
+//            partialView.setVisibility(isOpen() ? View.GONE : VISIBLE);
+            partialView.setVisibility(VISIBLE);
+
         }
     }
 }

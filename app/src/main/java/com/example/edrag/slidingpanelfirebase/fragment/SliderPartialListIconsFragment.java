@@ -1,6 +1,7 @@
 package com.example.edrag.slidingpanelfirebase.fragment;
 
 //import android.app.Fragment;
+
 import android.support.v4.app.Fragment;
 
 import android.content.Context;
@@ -12,10 +13,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
+import com.example.edrag.slidingpanelfirebase.IconPanelActivity;
 import com.example.edrag.slidingpanelfirebase.R;
 import com.example.edrag.slidingpanelfirebase.adapter.AdapterIconsImage;
+import com.example.edrag.slidingpanelfirebase.adapter.AdapterIconsImage.CallFragment;
 import com.example.edrag.slidingpanelfirebase.model.IconsListImage;
 
 import java.util.ArrayList;
@@ -29,16 +31,21 @@ public class SliderPartialListIconsFragment extends Fragment {
     private RecyclerView iconsRecycler;
     private AdapterIconsImage adapterIcon;
     private ArrayList<IconsListImage> elementIcons;
+    private static CallFragment listener;
+
+//    private static final String ARG_PARAM1 = "listener";
+
 
     public SliderPartialListIconsFragment() {
+
     }
 
-    public static Fragment newInstance() {
+    public static Fragment newInstance(CallFragment callFragment) {
         SliderPartialListIconsFragment fragment = new SliderPartialListIconsFragment();
-//        Bundle args = new Bundle();
+        listener = callFragment;
 
-        /*
-        args.putString(ARG_PARAM1, id);
+//        Bundle args = new Bundle();
+/*
         args.putString(ARG_PARAM2, name);
         args.putString(ARG_PARAM3, base64);
         args.putString(ARG_PARAM4, mlastName);
@@ -74,13 +81,23 @@ public class SliderPartialListIconsFragment extends Fragment {
         elementIcons.add(new IconsListImage("Ed_3"));
         elementIcons.add(new IconsListImage("Ed_4"));
         elementIcons.add(new IconsListImage("Ed_5"));
+
         /////////////////////////////////////////////////////////////////////////////////
 
-        adapterIcon = new AdapterIconsImage(this.getActivity(), elementIcons);
+        View element;
+
+        adapterIcon = new AdapterIconsImage(this.getActivity(), elementIcons, listener);
         iconsRecycler.setAdapter(adapterIcon);
 
         return view;
     }
+
+
+//    new AdapterIconsImage.OnItemClicked() {
+//        void onItemClick(View view) {
+//            view.setBackgroundColor(Color.GREEN);
+//        }
+//    }
 
     @Override
     public void onAttach(Context context) {

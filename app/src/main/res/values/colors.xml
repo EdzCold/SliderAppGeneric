@@ -6,7 +6,9 @@
 
     <color name="partialpanel_color">#03A9F4</color>
     <color name="fullpanel_color">#81D4FA</color>
-    <color name="windows_panel_color">#303F9F</color>
+    <!--<color name="windows_panel_color">#303F9F</color>-->
+    <color name="windows_panel_color">#FFFFFF</color>
+
     <color name="black">#000000</color>
 
 </resources>
