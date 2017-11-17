@@ -51,11 +51,12 @@ public class SliderFullListFragment extends Fragment {
 
         //Inizialiced icons adapter    //////////////////////////////////////////////////
         ArrayList<IconsListImage> elementIcons = new ArrayList<>();
-        elementIcons.add(new IconsListImage("Ed_1", "---1---"));
-        elementIcons.add(new IconsListImage("Ed_2", "---2---"));
-        elementIcons.add(new IconsListImage("Ed_3", "---3---"));
-        elementIcons.add(new IconsListImage("Ed_4", "---4---"));
-        elementIcons.add(new IconsListImage("Ed_5", "---5---"));
+        elementIcons.add(new IconsListImage("FireBase Analitics", R.drawable.ic_backup_black_24dp));
+        elementIcons.add(new IconsListImage("FireBase Notification", R.drawable.ic_chrome_reader_mode_black_24dp));
+        elementIcons.add(new IconsListImage("", R.drawable.ic_storage_black_24dp));
+        elementIcons.add(new IconsListImage("", R.drawable.ic_explore_black_24dp));
+        elementIcons.add(new IconsListImage("", R.drawable.ic_camera_alt_black_24dp));
+
         /////////////////////////////////////////////////////////////////////////////////
 
         adapterIconTitle = new AdapterIconTitle(this.getActivity(), elementIcons);

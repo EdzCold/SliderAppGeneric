@@ -6,16 +6,21 @@ package com.example.edrag.slidingpanelfirebase.model;
 
 public class IconsListImage {
 
-    private String name;
+    //    private String name;
+    private Integer idIcon;
     private String title;
 
-    public IconsListImage(String name) {
-        this.name = name;
+    public IconsListImage(String title, Integer idIcon) {
+        this.idIcon = idIcon;
+        this.title = title;
     }
 
-    public IconsListImage(String name, String title) {
-        this.name = name;
-        this.title = title;
+    public Integer getIdIcon() {
+        return idIcon;
+    }
+
+    public void setIdIcon(Integer idIcon) {
+        this.idIcon = idIcon;
     }
 
     public String getTitle() {
@@ -26,12 +31,14 @@ public class IconsListImage {
         this.title = title;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    //
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
 }

@@ -110,4 +110,5 @@ public class FireBaseAnalyticsFragment extends Fragment implements View.OnClickL
         Log.d("FIREBASE", "Button information: " + btnName);
         mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
+
 }

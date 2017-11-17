@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.edrag.slidingpanelfirebase.R;
@@ -42,16 +43,19 @@ public class AdapterIconTitle extends RecyclerView.Adapter<AdapterIconTitle.View
     public void onBindViewHolder(ViewHolder holder, int position) {
         itemIcon = icons.get(position);
 
-        holder.name.setText(itemIcon.getName());
+//        holder.name.setText(itemIcon.getName());
         holder.title.setText(itemIcon.getTitle());
+        holder.iconView.setImageResource(itemIcon.getIdIcon());
 
         holder.setItemClickListener(new ItemClickListener() {
 
             @Override
             public void onClick(View view, int position, boolean isLongClick) {
+                new AdapterIconsImage(context, icons, listener).selectOption();
+
                 view.setBackgroundColor(Color.GREEN);
 
-                if (nameView != null) {
+                if (nameView != null && !view.equals(nameView)) {
                     nameView.setBackgroundColor(Color.TRANSPARENT);
                 }
 
@@ -68,14 +72,16 @@ public class AdapterIconTitle extends RecyclerView.Adapter<AdapterIconTitle.View
 
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
-        private TextView name;
+        //        private TextView name;
+        private ImageView iconView;
         private TextView title;
         private ItemClickListener itemClickListener;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            name = (TextView) itemView.findViewById(R.id.icon_element_txt);
+//            name = (TextView) itemView.findViewById(R.id.icon_element_txt);
+            iconView = (ImageView) itemView.findViewById(R.id.name_element_txt);
             title = (TextView) itemView.findViewById(R.id.title_icon_txt);
 
             itemView.setOnClickListener(this);
@@ -99,4 +105,11 @@ public class AdapterIconTitle extends RecyclerView.Adapter<AdapterIconTitle.View
         }
 
     }
+
+    public interface CallFragment {
+        void callFragmentNotification();
+
+        void callFragmentAnalytics();
+    }
+
 }
